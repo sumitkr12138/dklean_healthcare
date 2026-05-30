@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "dklearn",
+			"path": "../../.."
+		},
+		{
+			"name": "Dklean-backend",
+			"path": "../../../../Dklean-backend"
+		}
+	],
+	"settings": {}
+}
