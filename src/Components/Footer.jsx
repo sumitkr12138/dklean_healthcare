@@ -157,7 +157,7 @@ const Footer = () => {
 
         <div className="text-center text-sm bg-gray-100 text-gray-600 py-4">
           © {year} Dklean HealthCare Public Charitable Trust (NGO). All Rights
-          Reserved.
+          Reserved..
         </div>
       </footer>
     </div>
