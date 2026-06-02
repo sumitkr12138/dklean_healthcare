@@ -1,17 +1,36 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStethoscope, faBrain, faWheelchair } from '@fortawesome/free-solid-svg-icons';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faStethoscope,
+  faBrain,
+  faWheelchair,
+} from "@fortawesome/free-solid-svg-icons";
 
 const HomeSmall = () => {
   const items = [
-    { title: 'Diagnose', subtitle: 'Examination & Diagnosis', icon: faStethoscope, size: '3x' },
-    { title: 'Treatment', subtitle: 'Treatment of the disease', icon: faBrain, size: '4x' },
-    { title: 'Care Healthy', subtitle: 'Care and Recuperation', icon: faWheelchair, size: '5x' },
+    {
+      title: "Diagnose",
+      subtitle: "Examination & Diagnosis",
+      icon: faStethoscope,
+      size: "3x",
+    },
+    {
+      title: "Treatment",
+      subtitle: "Treatment of the disease",
+      icon: faBrain,
+      size: "4x",
+    },
+    {
+      title: "Care Healthy",
+      subtitle: "Care and Recuperation",
+      icon: faWheelchair,
+      size: "5x",
+    },
   ];
 
   return (
-    <div className="Home-Small lg:h-[40vh] flex justify-center items-center w-full mt-5 mb-10">
-      <div className="w-4/6 grid lg:grid-cols-3 gap-8">
+    <div className="Home-Small w-full py-8 md:py-10 lg:py-12">
+      <div className="w-4/6 mx-auto grid lg:grid-cols-3 gap-8">
         {items.map((item, index) => (
           <div
             key={index}

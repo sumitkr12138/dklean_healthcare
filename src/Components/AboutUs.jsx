@@ -9,7 +9,7 @@ import inno from "../assets/about/inno.webp";
 import ash from "../assets/doctors/ashwani.jpg";
 import may from "../assets/doctors/mayank.jpg";
 import dkum from "../assets/doctors/dkumar.jpg";
-import BigBig from "../assets/home/image6.webp"
+import BigBig from "../assets/home/image6.webp";
 
 const AboutUs = () => {
   const teamMembers = [
@@ -89,7 +89,7 @@ const AboutUs = () => {
         heading="Our Dedicated Team"
         description="At Dklean Health Care Public Charitable Trust (N.G.O.), our team is our biggest strength. We bring together experienced doctors, skilled nurses, and dedicated healthcare professionals who work tirelessly to provide the best medical services. Our team members are driven by passion, empathy, and a commitment to improving lives through quality healthcare."
       />
-      <Members teamMembers={teamMembers} heading="Team Members" />
+      {/* <Members teamMembers={teamMembers} heading="Team Members" /> */}
       <LeftImgAbout
         img="https://www.healtharc.io/wp-content/uploads/2025/12/What-Is-Patient-Centered-Care-Benefits-Key-Principles-and-Real-World-Examples-1024x563.webp"
         heading="Patient-Centered Approach"

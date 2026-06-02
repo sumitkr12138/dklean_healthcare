@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import Loader from "./Components/Loader";
 import AboutUs from "./Components/AboutUs";
@@ -88,6 +88,9 @@ import DelhiServices from "./Components/DelhiServices";
 import PatnaServices from "./Components/PatnaService";
 import NawadaServices from "./Components/NawadaServices";
 
+import Awards from "./Components/Awards";
+import WhyChooseDklean from "./Components/WhyChooseDklean";
+import FAQ from "./Components/FAQ";
 // home images
 import img from "./assets/home/bgone.jpeg";
 import imgone from "./assets/home/bgtwo.jpeg";
@@ -242,6 +245,11 @@ function App() {
                 <StaticDonateSection /> */}
 
                 <Testimony />
+
+                <WhyChooseDklean />
+                <FAQ />
+
+                <Awards />
                 <Professional />
 
                 <Footer />
@@ -304,6 +312,7 @@ function App() {
               ) : (
                 <>
                   <Navbar />
+                  <Awards />
                   <AdminLogin />
                   <Footer />
                 </>

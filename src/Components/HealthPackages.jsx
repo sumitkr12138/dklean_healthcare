@@ -279,7 +279,17 @@ const HealthPackagesSlider = () => {
   const packages = [
     {
       name: "Advanced Health Package",
-      price: 1499,
+      originalPrice: 1999,
+      offerPrice: 1499,
+      description:
+        "Best for routine health checkup with trusted home sample collection.",
+      badge: "Best Value",
+      trustPoints: [
+        "Home Collection Available",
+        "Online Reports Available",
+        "Affordable NGO Pricing",
+      ],
+      reportDelivery: "Reports within 24 Hours",
       tests: [
         "CBC",
         "HbA1c",
@@ -292,7 +302,16 @@ const HealthPackagesSlider = () => {
     },
     {
       name: "Essential Health Checkup",
-      price: 999,
+      originalPrice: 1299,
+      offerPrice: 999,
+      description:
+        "Recommended for senior citizens and preventive health monitoring.",
+      trustPoints: [
+        "Home Collection Available",
+        "Online Reports Available",
+        "Affordable NGO Pricing",
+      ],
+      reportDelivery: "Reports within 24 Hours",
       tests: [
         "FBS (Diabetes)",
         "Lipid Profile (Heart)",
@@ -305,7 +324,15 @@ const HealthPackagesSlider = () => {
     },
     {
       name: "Advanced Health Checkup",
-      price: 1199,
+      originalPrice: 1799,
+      offerPrice: 1199,
+      description: "Comprehensive full body screening for proactive wellness.",
+      trustPoints: [
+        "Home Collection Available",
+        "Online Reports Available",
+        "Affordable NGO Pricing",
+      ],
+      reportDelivery: "Reports within 24 Hours",
       tests: [
         "FBS + HbA1c",
         "Lipid Profile",
@@ -319,7 +346,15 @@ const HealthPackagesSlider = () => {
     },
     {
       name: "Premium Full Body Checkup",
-      price: 1999,
+      originalPrice: 2499,
+      offerPrice: 1999,
+      description: "Complete preventive care package for whole-body screening.",
+      trustPoints: [
+        "Home Collection Available",
+        "Online Reports Available",
+        "Affordable NGO Pricing",
+      ],
+      reportDelivery: "Reports within 24 Hours",
       tests: [
         "FBS + HbA1c + Microalbumin",
         "Lipid Profile",
@@ -334,7 +369,16 @@ const HealthPackagesSlider = () => {
     },
     {
       name: "Basic Health Package",
-      price: 699,
+      originalPrice: 899,
+      offerPrice: 699,
+      description:
+        "Ideal starter blood test package for quick affordable screening.",
+      trustPoints: [
+        "Home Collection Available",
+        "Online Reports Available",
+        "Affordable NGO Pricing",
+      ],
+      reportDelivery: "Reports within 24 Hours",
       tests: [
         "CBC",
         "Blood Sugar",
@@ -395,25 +439,57 @@ const HealthPackagesSlider = () => {
           {visiblePackages.map((pkg, index) => (
             <div
               key={index}
-              className="bg-white border rounded-xl shadow hover:shadow-lg p-6"
+              className="bg-white border rounded-xl shadow hover:shadow-lg p-6 flex flex-col h-full min-h-[32rem]"
             >
-              <h2 className="font-bold text-lg mb-2 text-gray-800">
-                {pkg.name}
-              </h2>
+              <div className="relative">
+                {pkg.badge && (
+                  <span className="absolute right-0 top-0 inline-flex rounded-full bg-red-700 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-white">
+                    {pkg.badge}
+                  </span>
+                )}
+                <h2 className="font-bold text-xl mb-2 text-gray-800">
+                  {pkg.name}
+                </h2>
+                <p className="text-sm text-gray-500 mb-4">{pkg.description}</p>
+              </div>
 
-              <h3 className="text-2xl font-bold text-red-700 mb-4">
-                ₹{pkg.price}
-              </h3>
+              <div className="text-center mb-4">
+                <div className="text-sm text-gray-400 line-through">
+                  ₹{pkg.originalPrice}
+                </div>
+                <div className="text-3xl font-extrabold text-red-700">
+                  ₹{pkg.offerPrice}
+                </div>
+                <div className="text-sm text-green-600 font-semibold mt-1">
+                  Save ₹{pkg.originalPrice - pkg.offerPrice}
+                </div>
+              </div>
 
-              <ul className="text-sm text-gray-600 space-y-1 mb-4">
+              <div className="mb-4 space-y-2 text-sm text-gray-600">
+                {pkg.trustPoints.map((point, idx) => (
+                  <div key={idx} className="flex items-center gap-2">
+                    <span className="inline-flex h-2.5 w-2.5 rounded-full bg-red-700" />
+                    <span>{point}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mb-4 text-sm text-gray-500">
+                {pkg.reportDelivery}
+              </div>
+
+              <ul className="text-sm text-gray-600 space-y-2 flex-1 mb-6">
                 {pkg.tests.map((test, i) => (
-                  <li key={i}>• {test}</li>
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="mt-1 h-1.5 w-1.5 rounded-full bg-gray-400" />
+                    <span>{test}</span>
+                  </li>
                 ))}
               </ul>
 
               <Link
                 to="/staticbookappointment"
-                className="block w-full bg-red-700 text-white py-2 rounded-md hover:bg-red-800 text-center"
+                className="mt-auto block w-full bg-red-700 text-white py-2 rounded-md hover:bg-red-800 text-center font-semibold"
               >
                 Book Now
               </Link>
