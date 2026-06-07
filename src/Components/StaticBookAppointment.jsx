@@ -9,6 +9,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { useLocation } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer";
+import { FaWhatsapp } from "react-icons/fa";
 // ─── 🔧 REPLACE THESE WITH YOUR EMAILJS CREDENTIALS ───────────────────────────
 const EMAILJS_SERVICE_ID = "service_sijawxl"; // e.g. "service_abc123"
 const EMAILJS_TEMPLATE_ID = "template_3c185hn"; // e.g. "template_xyz456"
@@ -169,13 +170,19 @@ ${form.message || "No additional notes"}
             <div className="flex justify-center gap-8 flex-wrap">
               <div className="flex items-center gap-2">
                 <span className="text-red-600 font-bold">📞</span>
-                <a href="tel:+918510090506" className="text-red-600 font-semibold hover:underline">
+                <a
+                  href="tel:+918510090506"
+                  className="text-red-600 font-semibold hover:underline"
+                >
                   +91 8510090506
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-red-600 font-bold">📞</span>
-                <a href="tel:+915356647306" className="text-red-600 font-semibold hover:underline">
+                <a
+                  href="tel:+915356647306"
+                  className="text-red-600 font-semibold hover:underline"
+                >
                   +91 5356647306
                 </a>
               </div>
@@ -185,20 +192,36 @@ ${form.message || "No additional notes"}
           {/* Statistics Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             <div className="text-center">
-              <p className="text-2xl md:text-3xl font-bold text-[#6d0101]">5000+</p>
-              <p className="text-gray-600 text-sm md:text-base">Blood Tests Completed</p>
+              <p className="text-2xl md:text-3xl font-bold text-[#6d0101]">
+                5000+
+              </p>
+              <p className="text-gray-600 text-sm md:text-base">
+                Blood Tests Completed
+              </p>
             </div>
             <div className="text-center">
-              <p className="text-2xl md:text-3xl font-bold text-[#6d0101]">50+</p>
-              <p className="text-gray-600 text-sm md:text-base">Health Camps Conducted</p>
+              <p className="text-2xl md:text-3xl font-bold text-[#6d0101]">
+                50+
+              </p>
+              <p className="text-gray-600 text-sm md:text-base">
+                Health Camps Conducted
+              </p>
             </div>
             <div className="text-center">
-              <p className="text-2xl md:text-3xl font-bold text-[#6d0101]">1000+</p>
-              <p className="text-gray-600 text-sm md:text-base">Patients Served</p>
+              <p className="text-2xl md:text-3xl font-bold text-[#6d0101]">
+                1000+
+              </p>
+              <p className="text-gray-600 text-sm md:text-base">
+                Patients Served
+              </p>
             </div>
             <div className="text-center">
-              <p className="text-2xl md:text-3xl font-bold text-[#6d0101]">20+</p>
-              <p className="text-gray-600 text-sm md:text-base">Corporate Clients</p>
+              <p className="text-2xl md:text-3xl font-bold text-[#6d0101]">
+                20+
+              </p>
+              <p className="text-gray-600 text-sm md:text-base">
+                Corporate Clients
+              </p>
             </div>
           </div>
 
@@ -430,19 +453,20 @@ ${form.message || "No additional notes"}
                       "Request Appointment"
                     )}
                   </button>
-                   <button
-                     type="button"
-                     onClick={() => {
-                       const whatsappNumber = "918510090506";
-                       const whatsappMessage = "Hello, I would like to book an appointment.";
-                       const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-                       window.open(whatsappURL, "_blank");
-                     }}
-                     className="w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition duration-300 text-sm flex items-center justify-center gap-2"
-                   >
-                     <span>??</span>
-                     Book via WhatsApp
-                   </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const whatsappNumber = "918510090506";
+                      const whatsappMessage =
+                        "Hello, I would like to book an appointment.";
+                      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+                      window.open(whatsappURL, "_blank");
+                    }}
+                    className="w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition duration-300 text-sm flex items-center justify-center gap-2"
+                  >
+                    <FaWhatsapp className="text-xl" />
+                    Book via WhatsApp
+                  </button>
                   <p className="text-center text-xs text-gray-400">
                     We'll call you within a few hours to confirm.
                   </p>
@@ -458,3 +482,4 @@ ${form.message || "No additional notes"}
 };
 
 export default StaticBookAppointment;
+
