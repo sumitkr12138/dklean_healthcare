@@ -159,7 +159,47 @@ ${form.message || "No additional notes"}
               Fill in the form below and we will confirm your appointment
               shortly. Home collection available.
             </p>
-            <div className="w-16 h-1 bg-[#6d0101] mx-auto mt-4 rounded-full" />
+          </div>
+
+          {/* Need Immediate Assistance Section */}
+          <div className="bg-red-50 rounded-lg p-6 mb-8 border border-red-100">
+            <p className="text-center text-gray-700 font-semibold mb-3">
+              Need Immediate Assistance?
+            </p>
+            <div className="flex justify-center gap-8 flex-wrap">
+              <div className="flex items-center gap-2">
+                <span className="text-red-600 font-bold">📞</span>
+                <a href="tel:+918510090506" className="text-red-600 font-semibold hover:underline">
+                  +91 8510090506
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-red-600 font-bold">📞</span>
+                <a href="tel:+915356647306" className="text-red-600 font-semibold hover:underline">
+                  +91 5356647306
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Statistics Section */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div className="text-center">
+              <p className="text-2xl md:text-3xl font-bold text-[#6d0101]">5000+</p>
+              <p className="text-gray-600 text-sm md:text-base">Blood Tests Completed</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl md:text-3xl font-bold text-[#6d0101]">50+</p>
+              <p className="text-gray-600 text-sm md:text-base">Health Camps Conducted</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl md:text-3xl font-bold text-[#6d0101]">1000+</p>
+              <p className="text-gray-600 text-sm md:text-base">Patients Served</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl md:text-3xl font-bold text-[#6d0101]">20+</p>
+              <p className="text-gray-600 text-sm md:text-base">Corporate Clients</p>
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-10 items-center">
@@ -390,6 +430,19 @@ ${form.message || "No additional notes"}
                       "Request Appointment"
                     )}
                   </button>
+                   <button
+                     type="button"
+                     onClick={() => {
+                       const whatsappNumber = "918510090506";
+                       const whatsappMessage = "Hello, I would like to book an appointment.";
+                       const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+                       window.open(whatsappURL, "_blank");
+                     }}
+                     className="w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition duration-300 text-sm flex items-center justify-center gap-2"
+                   >
+                     <span>??</span>
+                     Book via WhatsApp
+                   </button>
                   <p className="text-center text-xs text-gray-400">
                     We'll call you within a few hours to confirm.
                   </p>
