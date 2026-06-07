@@ -11,7 +11,7 @@ const testimonials = [
   {
     message:
       "Dklean Healthcare conducted a health screening camp for our employees with excellent professionalism and timely report delivery.",
-    name: "A.P. Securitas Pvt. Ltd.",
+    name: "Mr. K.K Mishra",
     organization: "Corporate Health Camp",
     designation: "HR Head",
     rating: 5,
@@ -30,7 +30,7 @@ const testimonials = [
   {
     message:
       "Affordable pricing and quality diagnostic services. Highly recommended for preventive health checkups.",
-    name: "Axis Max Life Insurance Employees",
+    name: "Rajesh Garg",
     organization: "Axis Max Life Insurance",
     designation: "Group Wellness Program",
     rating: 5,

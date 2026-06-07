@@ -88,9 +88,14 @@ const DoctorSlider = () => {
 
         {/* Right Section */}
         <div
-          className="right bg-cover bg-center lg:h-96 lg:w-[30vw] rounded-xl hidden lg:block animate__animated animate__backInRight"
+          className="right lg:h-[500px] lg:w-[30vw] hidden lg:block bg-no-repeat bg-contain bg-center animate__animated animate__backInRight"
           style={{ backgroundImage: `url(${bigdoctor})` }}
         ></div>
+
+        {/* <div
+          className="right bg-cover bg-center lg:h-96 lg:w-[30vw] rounded-xl hidden lg:block animate__animated animate__backInRight"
+          style={{ backgroundImage: `url(${bigdoctor})` }}
+        ></div> */}
       </div>
     </div>
   );

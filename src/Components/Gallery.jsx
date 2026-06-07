@@ -218,7 +218,7 @@ const Gallery = () => {
           {/* Statistics */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6 text-center">
             <div className="p-4 bg-white/90 rounded-lg shadow-sm">
-              <div className="text-2xl font-bold text-[#6d0101]">5000+</div>
+              <div className="text-2xl font-bold text-[#6d0101]">2000+</div>
               <div className="text-sm text-gray-600">Blood Tests Conducted</div>
             </div>
             <div className="p-4 bg-white/90 rounded-lg shadow-sm">
@@ -230,7 +230,7 @@ const Gallery = () => {
               <div className="text-sm text-gray-600">Patients Served</div>
             </div>
             <div className="p-4 bg-white/90 rounded-lg shadow-sm">
-              <div className="text-2xl font-bold text-[#6d0101]">20+</div>
+              <div className="text-2xl font-bold text-[#6d0101]">10+</div>
               <div className="text-sm text-gray-600">Corporate Clients</div>
             </div>
           </div>
