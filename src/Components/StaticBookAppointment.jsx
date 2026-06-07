@@ -193,7 +193,7 @@ ${form.message || "No additional notes"}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             <div className="text-center">
               <p className="text-2xl md:text-3xl font-bold text-[#6d0101]">
-                5000+
+                2000+
               </p>
               <p className="text-gray-600 text-sm md:text-base">
                 Blood Tests Completed
@@ -217,7 +217,7 @@ ${form.message || "No additional notes"}
             </div>
             <div className="text-center">
               <p className="text-2xl md:text-3xl font-bold text-[#6d0101]">
-                20+
+                10+
               </p>
               <p className="text-gray-600 text-sm md:text-base">
                 Corporate Clients
@@ -482,4 +482,3 @@ ${form.message || "No additional notes"}
 };
 
 export default StaticBookAppointment;
-
