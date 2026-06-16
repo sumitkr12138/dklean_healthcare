@@ -180,10 +180,10 @@ ${form.message || "No additional notes"}
               <div className="flex items-center gap-2">
                 <span className="text-red-600 font-bold">📞</span>
                 <a
-                  href="tel:+915356647306"
+                  href="tel:+919355647906"
                   className="text-red-600 font-semibold hover:underline"
                 >
-                  +91 5356647306
+                  +91 9355647906
                 </a>
               </div>
             </div>
@@ -457,8 +457,19 @@ ${form.message || "No additional notes"}
                     type="button"
                     onClick={() => {
                       const whatsappNumber = "918510090506";
-                      const whatsappMessage =
-                        "Hello, I would like to book an appointment.";
+                      // const whatsappMessage =
+                      //   "Hello, I would like to book an appointment.";
+                      const whatsappMessage = `DKlean Healthcare Appointment Request
+
+Name:
+Mobile Number:
+Service Required:
+Preferred Date:
+Location:
+
+Please contact me to confirm my appointment.
+
+Thank you.`;
                       const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
                       window.open(whatsappURL, "_blank");
                     }}
