@@ -1,8 +1,10 @@
 import dkum from "../assets/doctors/dkumar.jpg";
 import sumit from "../assets/sumit.jpg.jpeg";
+import sumit1 from "../assets/sumit1.jpeg";
+import priyanka from "../assets/priyanka.jpeg";
+import akanksha from "../assets/akanksha.jpeg";
 import { Phone, Mail } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
-
 
 const Leadership = () => {
   const teamMembers = [
@@ -11,16 +13,34 @@ const Leadership = () => {
       designation: "Founder & Chairman",
       img: dkum,
       contact: "+91 8510090506",
-      email: "",
-      linkedin: "",
+      email: "dkleanngotrust@gmail.com",
+      linkedin: "https://in.linkedin.com/",
     },
+
     {
       name: "Sumit Kumar",
       designation: "Co-Founder & Director",
-      img: sumit,
+      img: sumit1,
       contact: "+91 9472897710",
-      email: "",
-      linkedin: "",
+      email: "sumitkumar12138@gmail.com",
+      linkedin: "https://in.linkedin.com/",
+    },
+    {
+      name: "Mrs. Priyanka",
+      designation: "Healthcare Operations Manager",
+      img: priyanka,
+      contact: "+91 9355647906",
+      email: "dkleanhealthcare@gmail.com",
+      linkedin: "https://in.linkedin.com/",
+    },
+
+    {
+      name: "Ms. Akanksha",
+      designation: "Community Outreach Manager",
+      img: akanksha,
+      contact: "+91 9355647906",
+      email: "dkmarketing526@gmail.com",
+      linkedin: "https://in.linkedin.com/",
     },
   ];
 
@@ -46,7 +66,9 @@ const Leadership = () => {
             />
 
             {/* Name & Designation */}
-            <h3 className="text-xl font-bold text-gray-800 mb-1">{member.name}</h3>
+            <h3 className="text-xl font-bold text-gray-800 mb-1">
+              {member.name}
+            </h3>
             <p className="text-base text-gray-500 mb-5">{member.designation}</p>
 
             {/* Icons Row */}
@@ -57,12 +79,12 @@ const Leadership = () => {
             </div>
 
             {/* Contact Number */}
-            {member.contact && (
+            {/* {member.contact && (
               <div className="flex items-center gap-2 text-base text-red-600 font-semibold">
                 <Phone className="w-4 h-4" />
                 <span>{member.contact}</span>
               </div>
-            )}
+            )} */}
           </div>
         ))}
       </div>
